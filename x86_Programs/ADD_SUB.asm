@@ -1,0 +1,22 @@
+INCLUDELIB kernel32.lib
+ExitProcess PROTO
+
+.DATA
+
+
+.CODE
+main PROC
+	MOV RAX, 2
+	MOV RDX, 3
+	ADD RAX, RDX
+
+	XOR RAX, RAX
+	XOR RDX, RDX
+	MOV RAX, 4
+	MOV RDX, 2
+	SUB RAX, RDX
+
+CALL ExitProcess
+main ENDP
+
+END
